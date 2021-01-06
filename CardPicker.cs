@@ -20,10 +20,11 @@ namespace PickRandomCards
         private static string RandomSuit()
         {
             int value = random.Next(1, 5);
-            if (value == 1)
-            {
-                return 
-            }
+            if (value == 1) return "Spades";
+            if (value == 2) return "Hearts";
+            if (value == 3) return "Clubs";
+            return "Diamonds";
+
         }
 
         private static string RandomValue()
