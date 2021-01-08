@@ -12,7 +12,7 @@ namespace PickRandomCards
             string[] pickedCards = new string[numberOfCards];
             for (int i = 0; i < numberOfCards; i++)
             {
-                pickedCards = RandomValue() + " of " + RandomSuit();
+                pickedCards[i] = RandomValue() + " of " + RandomSuit();
             }
             return pickedCards;
         }
@@ -29,7 +29,12 @@ namespace PickRandomCards
 
         private static string RandomValue()
         {
-            throw new NotImplementedException();
+            int value = random.Next(1, 14);
+            if (value == 1) return "Ace";
+            if (value == 11) return "Jack";
+            if (value == 12) return "Queen";
+            if (value == 11) return "King";
+            return value.ToString();    
         }
     }
 }
